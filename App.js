@@ -17,14 +17,14 @@ import {
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
-
+  const [mnemonic, setMnemonic] = React.useState('');
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
   const onPressCreateMnemonic = async () => {
     const mnemonic = await bip39.generateMnemonic();
-    console.log(mnemonic);
+    setMnemonic(mnemonic);
   };
 
   return (
@@ -42,6 +42,12 @@ const App = () => {
             title="Generate Mnemonic"
             color="#841584"
           />
+          <Text
+            style={styles.input}
+            
+          >
+            {mnemonic}
+          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -52,6 +58,13 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
+  },
+  input: {
+    height: 100,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    fontSize: 21,
   },
   sectionTitle: {
     fontSize: 24,
