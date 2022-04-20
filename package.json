@@ -7,7 +7,9 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "podinstall-m1": "cd ios && arch -x86_64 pod install --verbose && cd ..",
+    "podinstall": "cd ios && pod install --verbose && cd .."
   },
   "dependencies": {
     "create-hash": "^1.2.0",
