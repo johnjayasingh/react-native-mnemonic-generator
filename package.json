@@ -61,5 +61,9 @@
     "stream": "stream-browserify",
     "crypto": "react-native-crypto",
     "vm": "vm-browserify"
+  },
+  "author": {
+    "name": "John Jayasingh",
+    "email": "johnjayasingh.s@gmail.com"
   }
 }
